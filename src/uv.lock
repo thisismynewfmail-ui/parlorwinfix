@@ -1035,6 +1035,37 @@ wheels = [
 ]
 
 [[package]]
+name = "parlor"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "fastapi" },
+    { name = "kokoro-onnx", marker = "sys_platform == 'linux'" },
+    { name = "litert-lm" },
+    { name = "misaki", extra = ["en"], marker = "sys_platform == 'darwin'" },
+    { name = "mlx-audio", marker = "sys_platform == 'darwin'" },
+    { name = "num2words", marker = "sys_platform == 'darwin'" },
+    { name = "numpy" },
+    { name = "soundfile" },
+    { name = "uvicorn", extra = ["standard"] },
+    { name = "websockets" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "fastapi", specifier = ">=0.135.3" },
+    { name = "kokoro-onnx", marker = "sys_platform == 'linux'", specifier = ">=0.5.0" },
+    { name = "litert-lm", specifier = ">=0.10.1" },
+    { name = "misaki", extras = ["en"], marker = "sys_platform == 'darwin'", specifier = ">=0.9.4" },
+    { name = "mlx-audio", marker = "sys_platform == 'darwin'", specifier = ">=0.4.2" },
+    { name = "num2words", marker = "sys_platform == 'darwin'", specifier = ">=0.5.14" },
+    { name = "numpy", specifier = ">=2.4.4" },
+    { name = "soundfile", specifier = ">=0.13.1" },
+    { name = "uvicorn", extras = ["standard"], specifier = ">=0.43.0" },
+    { name = "websockets", specifier = ">=16.0" },
+]
+
+[[package]]
 name = "phonemizer-fork"
 version = "3.3.2"
 source = { registry = "https://pypi.org/simple" }
@@ -1764,37 +1795,6 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/67/3d/926db774c9c98acf66cb4ed7faf6c377746f3e00b84b700d0868b95d0712/spacy-loggers-1.0.5.tar.gz", hash = "sha256:d60b0bdbf915a60e516cc2e653baeff946f0cfc461b452d11a4d5458c6fe5f24", size = 20811, upload-time = "2023-09-11T12:26:52.323Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/33/78/d1a1a026ef3af911159398c939b1509d5c36fe524c7b644f34a5146c4e16/spacy_loggers-1.0.5-py3-none-any.whl", hash = "sha256:196284c9c446cc0cdb944005384270d775fdeaf4f494d8e269466cfa497ef645", size = 22343, upload-time = "2023-09-11T12:26:50.586Z" },
-]
-
-[[package]]
-name = "src"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "fastapi" },
-    { name = "kokoro-onnx", marker = "sys_platform == 'linux'" },
-    { name = "litert-lm" },
-    { name = "misaki", extra = ["en"], marker = "sys_platform == 'darwin'" },
-    { name = "mlx-audio", marker = "sys_platform == 'darwin'" },
-    { name = "num2words", marker = "sys_platform == 'darwin'" },
-    { name = "numpy" },
-    { name = "soundfile" },
-    { name = "uvicorn", extra = ["standard"] },
-    { name = "websockets" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "fastapi", specifier = ">=0.135.3" },
-    { name = "kokoro-onnx", marker = "sys_platform == 'linux'", specifier = ">=0.5.0" },
-    { name = "litert-lm", specifier = ">=0.10.1" },
-    { name = "misaki", extras = ["en"], marker = "sys_platform == 'darwin'", specifier = ">=0.9.4" },
-    { name = "mlx-audio", marker = "sys_platform == 'darwin'", specifier = ">=0.4.2" },
-    { name = "num2words", marker = "sys_platform == 'darwin'", specifier = ">=0.5.14" },
-    { name = "numpy", specifier = ">=2.4.4" },
-    { name = "soundfile", specifier = ">=0.13.1" },
-    { name = "uvicorn", extras = ["standard"], specifier = ">=0.43.0" },
-    { name = "websockets", specifier = ">=16.0" },
 ]
 
 [[package]]
